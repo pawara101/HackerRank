@@ -11,17 +11,13 @@ def minion_game(string):
 
         else:
             string_cos.append(i)
-
-    #print(string_vow)
-    #print(string_cos)
-
     
     ## Stuart ##
     ind = [ind for (ind,i) in enumerate(string) if i in string_cos]
     count_st=0
     for i in ind:
         for j in range(i,len(string)):
-            #print(string[i:j+1])
+        
             count_st = count_st+1
 
     #print(count_st)
@@ -41,9 +37,11 @@ def minion_game(string):
         print(f'Kevin {count_kv}')
         
 
-    else:
+    if count_kv < count_st:
         print(f'Stuart {count_st}')
 
+    else:
+        print('Draw')
 
 if __name__ == '__main__':
     s = input()
